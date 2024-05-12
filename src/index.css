@@ -1,13 +1,902 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: "Concert One", sans-serif;
+  font-weight: 500;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #fff0ca;
+}
+
+nav {
+  background-color: #005f31;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding-right: 40px;
+}
+
+nav ul li a:hover {
+  color: #f7be00;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.header_logo__x2KMD {
+  margin-right: -90px;
+}
+
+.r-heder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.r-heder input {
+  width: 250px;
+  height: 35px;
+  border-radius: 20px;
+  border: 0;
+}
+
+.r-heder .fa-user-circle {
+  margin-left: 20px;
+  margin-bottom: -1px;
+  font-size: 32px;
+  color: #f7be00
+}
+
+.r-heder .fa-shopping-bag {
+  margin-left: 20px;
+  margin-bottom: -1px;
+  font-size: 31px;
+  color: #f7be00
+}
+
+.landing-search {
+  font-size: 15px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  right: 152px;
+}
+
+#search {
+  padding-left: 20px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.slides {
+  height: 759px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  inset: 0;
+  animation: slide-show 12s infinite;
+}
+
+.slide-2 {
+  animation-delay: 4s;
+}
+
+.slide-3 {
+  animation-delay: 8s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes slide-show {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20%,
+  30% {
+    opacity: 1;
+    scale: 1.03;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.sign-up {
+  height: 35px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #f7be00;
+  text-align: center;
+  width: 80px;
+  font-weight: 600px;
+  padding-bottom: 3px;
+  margin-left: 20px;
+}
+
+.home-search {
+  font-size: 15px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  right: 96px;
+}
+
+.sec-2 {
+  max-width: 1244px;
+  margin: auto;
+  padding: 90px 0px 90px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sec-2 h1 {
+  font-size: 46px;
+  color: #005f31;
+  font-weight: bolder;
+  margin: 20px;
+}
+
+.sec-2 h2 {
+  font-size: 22px;
+  color: #005f31;
+  font-weight: 300px;
+  margin: 20px;
+}
+
+.sec-2 button {
+  margin: 20px 0px 0px 20px;
+  padding: 15px;
+  border: 3px solid #005f31;
+  background-color: #fff0ca;
+  color: #005f31;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.sec-2 button:hover {
+  background-color: #005f31;
+  color: white;
+}
+
+.sec-3 {
+  max-width: 1170px;
+  margin: auto;
+  padding: 90px 0px 90px 0px;
+}
+
+.bg-color {
+  background-color: #FEF9E5;
+}
+
+.sec-2-2 {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  padding-bottom: 120px;
+}
+
+.sec-2-2 img {
+  width: 219px;
+  height: 349px;
+  object-fit: cover;
+}
+
+.f-sec-2-2 {
+  background-color: #FFF0C6;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 455px;
+  width: 366px;
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.f-sec-2-2:hover {
+  background-image: url(/public/img/straw-product-preview-0-0.svg);
+  transition: opacity .25s ease-out .16s, transform .45s ease-out .16s;
+  transform: scale(1.04);
+  background-size: cover;
+  --aspect-ratio-current: 1/1;
+  aspect-ratio: var(--aspect-ratio-current);
+  background-color: #F7BE00;
+
+}
+
+.f-sec-2-3 {
+  background-color: #FFF0C6;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 455px;
+  width: 366px;
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.f-sec-2-3:hover {
+  background-image: url(/public/img/straw-product-preview-0-1.svg);
+  transition: opacity .50s ease-out .16s, transform .45s ease-out .16s;
+  transform: scale(1.04);
+  background-size: cover;
+  --aspect-ratio-current: 1/1;
+  aspect-ratio: var(--aspect-ratio-current);
+  background-color: #F7BE00;
+
+}
+
+.f-sec-2-4 {
+  background-color: #FFF0C6;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 455px;
+  width: 366px;
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.f-sec-2-4:hover {
+  background-image: url(/public/img/straw-product-preview-0-2.svg);
+  transition: opacity .25s ease-out .16s, transform .45s ease-out .16s;
+  transform: scale(1.04);
+  background-size: cover;
+  --aspect-ratio-current: 1/1;
+  aspect-ratio: var(--aspect-ratio-current);
+  background-color: #F7BE00;
+}
+
+.sec-2-2 {
+  color: #005f31;
+}
+
+.sec-2-2 h4 {
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+  font-size: var(--font-size-smaller);
+  letter-spacing: .05em;
+}
+
+.sec-2-2 h3 {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.sec-5 {
+  padding: 170px 0px 170px 170px;
+  position: relative;
+}
+
+.sec-5 h2 {
+  font-size: 25px;
+  margin-top: 30px;
+  color: #005f31;
+  font-weight: 600;
+}
+
+.sec-6 {
+  text-align: center;
+}
+
+.sec-6 h1 {
+  color: #005f31;
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.sec-6 h3 {
+  color: #005f31;
+  font-size: 23px;
+  margin-top: 20px;
+}
+
+.sec-6 button {
+  margin: 20px 0px 0px 20px;
+  padding: 15px;
+  border: 3px solid #005f31;
+  background-color: #FEF9E5;
+  color: #005f31;
+  border-radius: 30px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.sec-6 button:hover {
+  background-color: #005f31;
+  color: white;
+}
+
+.sec-7 {
+  padding: 200px 0px 200px 0px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.sec-8 {
+  background-color: #F7BE00;
+}
+
+.sec-8 button {
+  background-color: #F7BE00;
+}
+
+.sec-3 video {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.sec-9 {
+  padding: 90px 0px 90px 0px;
+  text-align: center;
+}
+
+.sec-9 h1 {
+  text-shadow: 2px 0 #005f31, -2px 0 #005f31, 0 2px #005f31, 0 -2px #005f31,
+    1px 1px #005f31, -1px -1px #005f31, 1px -1px #005f31, -1px 1px #005f31;
+  font-size: 70px;
+  color: #FEF9E5;
+
+  padding: 0 0 50px 0;
+}
+
+.sec-9 h1:hover {
+  color: #005f31;
+}
+
+.sec-10 {
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0px 100px 0px;
+  position: relative;
+}
+
+.sec-10 img {
+  width: 365px;
+  height: 365px;
+}
+
+.p-sec-1 {
+  text-align: center;
+  color: #005f31;
+  padding: 100px 0px 0px 0px;
+}
+
+.p-sec-1 h1 {
+  margin-top: 20px;
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.p-bg {
+  background-color: #FEF9E5;
+}
+
+.p-sec-3 {
+  padding: 90px 0px 0px 0px;
+}
+
+.p-sec-4 {
+  padding: 250px 0 250px 0;
+  position: relative;
+  max-width: 1280px;
+  margin: auto;
+  background-color: #FEF9E5;
+  height: 1050px;
+}
+
+.p-sec-5 h1 {
+  text-shadow: 2px 0 #005f31, -2px 0 #005f31, 0 2px #005f31, 0 -2px #005f31,
+    1px 1px #005f31, -1px -1px #005f31, 1px -1px #005f31, -1px 1px #005f31;
+  font-size: 70px;
+  color: #FFF0CA;
+  padding: 0 0 30px 0;
+  color: #FEF9E5;
+  letter-spacing: 3px;
+}
+
+.p-sec-5 h1:hover {
+  color: #005f31;
+}
+
+.h-Light {
+  background-color: #007DBB;
+}
+
+.h-Light h1 {
+  color: white;
+}
+
+.h-Light h2 {
+  color: white;
+}
+
+.p-sec-2-2:hover {
+  background-color: #007DBB;
+}
+
+.h-Premium {
+  background-color: #CF0540;
+}
+
+.h-Premium h1 {
+  color: white;
+}
+
+.h-Premium h2 {
+  color: white;
+}
+
+.p-sec-2-3:hover {
+  background-color: #CF0540;
+}
+
+.sec-2-2 button {
+  text-align: center;
+  margin-left: 130px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #FEF9E5;
+  color: #005f31;
+  border: 3px solid #005f31;
+  border-radius: 30px;
+  font-size: 20px;
+  width: 150px;
+}
+
+.sec-2-2 button:hover {
+  background-color: #005f31;
+  color: white;
+}
+
+.error {
+  color: red;
+  font-size: 20px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #FFF0CA;
+  background-image: url(/public/img/tropicana-lifestyle-outside-orchard-shot-48-1440.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.form-box {
+  position: relative;
+  width: 500px;
+  height: 520px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 100px;
+  backdrop-filter: blur(7px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box h2 {
+  color: white;
+  text-align: center;
+  font-size: 4em;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.inputbox {
+  position: relative;
+  margin: 30px 0 10px 0;
+  width: 310px;
+  border-bottom: 2px solid white;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 15px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+input:focus~label,
+input:focus~label {
+  top: 5px;
+}
+
+input:focus~label,
+input:valid~label {
+  top: -5px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: white;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: white;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+.forgat {
+  margin: 15px 0 15px;
+  font-size: .9em;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.forgat label input {
+  margin-right: 3px;
+
+}
+
+.forgat label a {
+  color: white;
+  text-decoration: none;
+}
+
+.forgat label a:hover {
+  text-decoration: underline;
+}
+
+.form-value button {
+  text-align: center;
+  margin: 10px 0px 0px 80px;
+  padding: 10px;
+  background-color: #FA7100;
+  color: #005f31;
+  border: 3px solid #005f31;
+  border-radius: 30px;
+  font-size: 20px;
+  width: 150px;
+}
+
+.form-value button:hover {
+  background-color: #005f31;
+  color: white;
+}
+
+.register {
+  font-size: .9em;
+  color: white;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a {
+  text-decoration: none;
+  color: white;
+  font-size: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  position: relative;
+}
+
+
+.fot {
+  background-color: #006032;
+  text-align: center;
+  width: 300px;
+  position: absolute;
+  top: 128px;
+  left: 550px;
+}
+
+.fot-data {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  position: absolute;
+  top: 250px;
+  width: 1100px;
+  left: 230px;
+  background-color: #005f31;
+}
+
+.fot-data h3 {
+  color: white;
+}
+
+.fot-data h3:hover {
+  color: #F7BE00;
+}
+
+.fot-data h4 {
+  color: white;
+}
+
+.fot-data h4:hover {
+  color: #F7BE00;
+}
+
+.fot-data p {
+  color: white;
+}
+
+.fot-data i {
+  font-size: 25px;
+  color: white;
+  padding-right: 20px;
+  padding-top: 70px
+}
+
+.fot-data i:hover {
+  color: #F7BE00;
+}
+
+ .btn-1{
+  width: 40px;
+  border:none;
+  background-color: #005f31;
+  color: white;
+ } 
+
+.Cart {
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#cart {
+  max-width: 1280px;
+  margin: auto;
+}
+
+#cart table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+#cart table img {
+  width: 100px
+}
+
+#cart table td:nth-child(1) {
+  width: 100px;
+}
+
+#cart table td:nth-child(2) {
+  width: 150px;
+}
+
+#cart table td:nth-child(3) {
+  width: 250px;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+  width: 150px;
+}
+
+#cart table td:nth-child(5) input {
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+
+#cart table thead {
+  border: 2px solid black;
+  border-left: none;
+  border-right: none;
+}
+
+#cart table thead th {
+  padding: 20px;
+  font-size: 20px;
+}
+
+#cart table thead td {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 18px 0;
+}
+
+#cart table tbody tr td {
+  padding: 20px;
+  font-size: 20px;
+}
+
+#cart table tbody tr{
+  border-bottom: 1px solid black;
+}
+#cart table tbody td {
+  font-size: 13px;
+}
+
+#card-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#coupon {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+#coupon h3,
+#subtotal h3 {
+  padding-bottom: 15px;
+}
+
+#coupon input {
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #e2e9e1;
+}
+
+#coupon button,
+#subtotal button {
+  background-color: #005f31;
+  color: white;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 10px;
+}
+
+#subtotal {
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+#subtotal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#subtotal table td {
+  width: 50%;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  top: 210px;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  color: #333;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #005f31;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+#popup1 h2{
+    color: green;
+}
+#popup2 h2{
+  color: green;
+}
+#popup3 h2{
+  color: red;
+}
+
+.cart-empty{
+  background-color: #005f31;
+  color: white;
+  font-size: 35px;
+  margin: 100px 400px 400px 400px;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 30px;
 }
