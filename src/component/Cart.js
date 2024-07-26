@@ -65,85 +65,85 @@ function Cart() {
           <p>Your cart is empty.</p>
         </div>
       ) : (
-      <div>
-        <div className='mt-5' id='cart'>
-          <h3 className="Cart text-left">Cart ...</h3>
-        </div>
-        <div id="cart" >
-          <table width={"100%"}>
-            <thead>
-              <tr>
-                <th>Remove</th>
-                <th>Product</th>
-                <th>Product-Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cartData.map(item => (
-                <tr key={item.id}>
-                  <td>
-                    <i onClick={() => handleRemove(item.id)} class="fa fa-times-circle" style={{ fontSize: "20px" }}></i>
-                  </td>
-                  <td>
-                    <img src={item.image} alt={item.name} />
-                  </td>
-                  <td>{item.name}</td>
-                  <td>{item.price}</td>
-                  <td><span><button onClick={() => handleIncrement(item.id)} className='btn-1'>+</button><button className='btn-1'>{item.quantity}</button><button onClick={() => handleDecrement(item.id)} className='btn-1'>-</button></span></td>
-                  <td>${calculateSubtotal(item)}</td>
+        <div>
+          <div className='mt-5' id='cart'>
+            <h3 className="Cart text-left">Cart ...</h3>
+          </div>
+          <div id="cart" >
+            <table width={"100%"}>
+              <thead>
+                <tr>
+                  <th>Remove</th>
+                  <th>Product</th>
+                  <th>Product-Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Subtotal</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {cartData.map(item => (
+                  <tr key={item.id}>
+                    <td>
+                      <i onClick={() => handleRemove(item.id)} class="fa fa-times-circle" style={{ fontSize: "20px" }}></i>
+                    </td>
+                    <td>
+                      <img src={item.image} alt={item.name} />
+                    </td>
+                    <td>{item.name}</td>
+                    <td>{item.price}</td>
+                    <td><span><button onClick={() => handleIncrement(item.id)} className='btn-1'>+</button><button className='btn-1'>{item.quantity}</button><button onClick={() => handleDecrement(item.id)} className='btn-1'>-</button></span></td>
+                    <td>${calculateSubtotal(item)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
-        <div style={{ margin: "80px 0" }}></div>
+          <div style={{ margin: "80px 0" }}></div>
 
-        <div id="cart">
-          <div id='card-add' >
-            <div id='coupon'>
-              <h3>Apply Coupan</h3>
-              <div>
-                <input type='text' placeholder='Enter You Coupan'></input>
-                <a href="#popup2"><button>Apply</button></a>
+          <div id="cart">
+            <div id='card-add' >
+              <div id='coupon'>
+                <h3>Apply Coupan</h3>
+                <div>
+                  <input type='text' placeholder='Enter You Coupan'></input>
+                  <a href="#popup2"><button>Apply</button></a>
+                </div>
               </div>
-            </div>
 
-            <div id='subtotal'>
-              <h3>Cart Totals</h3>
-              <table>
-                <tr>
-                  <td>Cart Subtotal</td>
-                  <td>${totalPrice}</td>
-                </tr>
-                <tr>
-                  <td>Shipping</td>
-                  <td>Free</td>
-                </tr>
-                <tr>
-                  <td>Tex</td>
-                  <td>(Incl. of All Taxes)</td>
-                </tr>
-                <tr>
-                  <td><strong>Total</strong></td>
-                  <td><strong>${totalPrice}</strong></td>
-                </tr>
-              </table>
-              <a href="#popup1" onClick={(removeItem) => handleRemove(removeItem)}><button>Proceed to Checkout</button></a>
-              <Link to="/product"><button style={{ marginLeft: "20px" }}>continue shopping</button></Link>
+              <div id='subtotal'>
+                <h3>Cart Totals</h3>
+                <table>
+                  <tr>
+                    <td>Cart Subtotal</td>
+                    <td>${totalPrice}</td>
+                  </tr>
+                  <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                  </tr>
+                  <tr>
+                    <td>Tex</td>
+                    <td>(Incl. of All Taxes)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>${totalPrice}</strong></td>
+                  </tr>
+                </table>
+                <a href="#popup1" onClick={(removeItem) => handleRemove(removeItem)}><button>Proceed to Checkout</button></a>
+                <Link to="/product"><button style={{ marginLeft: "20px" }}>continue shopping</button></Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       )}
 
       <div id="popup1" class="overlay">
         <div class="popup">
           <div>
-          <img src="/img/image-removebg-preview.png" alt="" style={{width : "150px" , height : "250px" , marginLeft : "130px"}}/>
+            <img src="/img/image-removebg-preview.png" alt="" style={{ width: "150px", height: "250px", marginLeft: "130px" }} />
           </div>
           <h2>success !</h2>
           <a class="close" href="#">&times;</a>
@@ -158,7 +158,8 @@ function Cart() {
           <h2>success !</h2>
           <a class="close" href="#">&times;</a>
           <div class="content">
-            Your Code Coupon Is Apply  Successfull          </div>
+            Your Code Coupon Is Apply  Successfull
+          </div>
         </div>
       </div>
     </div>
