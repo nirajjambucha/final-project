@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { decrementQuantity, incrementQuantity, removeItem } from '../redux/Action';
+import { clearCart, decrementQuantity, incrementQuantity, removeItem } from '../redux/Action';
 import { Link } from 'react-router-dom';
 
 function Cart() {
@@ -33,6 +33,10 @@ function Cart() {
       return 0;
     }
     return price * item.quantity;
+  };
+
+  const handleCheckout = () => {
+    dispatch(clearCart());
   };
 
   const totalPrice = cartData.reduce((total, item) => total + calculateSubtotal(item), 0);
@@ -132,7 +136,7 @@ function Cart() {
                     <td><strong>${totalPrice}</strong></td>
                   </tr>
                 </table>
-                <a href="#popup1" onClick={(removeItem) => handleRemove(removeItem)}><button>Proceed to Checkout</button></a>
+                <a href="#popup1"><button onClick={handleCheckout}>Proceed to Checkout</button></a>
                 <Link to="/product"><button style={{ marginLeft: "20px" }}>continue shopping</button></Link>
               </div>
             </div>

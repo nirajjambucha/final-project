@@ -1,3 +1,4 @@
+export const CLEAR_CART = 'CLEAR_CART';
 export const addToCart = (product, quantity = 1) => {
   return {
     type: 'ADD_TO_CART',
@@ -25,3 +26,7 @@ export const removeItem = (productId) => {
     payload: productId
   };
 };
+
+export const clearCart = () => ({
+  type: CLEAR_CART
+});

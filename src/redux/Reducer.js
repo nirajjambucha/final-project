@@ -1,3 +1,5 @@
+import { CLEAR_CART } from "./Action";
+
 const initialState = {
   cartItems: []
 };
@@ -33,11 +35,16 @@ const cartReducer = (state = initialState, action) => {
           item.id === action.payload ? { ...item, quantity: item.quantity - 1 } : item
         )
       };
-      case 'REMOVE_ITEM':
-        return {
-          ...state,
-          cartItems: state.cartItems.filter(item => item.id !== action.payload)
-        };
+    case 'REMOVE_ITEM':
+      return {
+        ...state,
+        cartItems: state.cartItems.filter(item => item.id !== action.payload)
+      };
+    case CLEAR_CART:
+      return {
+        ...state,
+        cartItems: []
+      };
     default:
       return state;
   }
