@@ -158,8 +158,7 @@ function Cart() {
           <h2>success !</h2>
           <a class="close" href="#">&times;</a>
           <div class="content">
-            Your Code Coupon Is Apply  Successfully
-          </div>
+            Your Code Coupon Is Apply  Successfull          </div>
         </div>
       </div>
     </div>
